@@ -157,7 +157,12 @@ setup(
 
     provides=['cliff',
               ],
+
+    setup_requires=['nose>=1.0'],
     install_requires=install_requires,
+
+    tests_require=['nose', 'mock', 'coverage'],
+    test_suite='nose.collector',
 
     namespace_packages=[],
     packages=find_packages(),
